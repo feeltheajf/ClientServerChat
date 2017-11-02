@@ -1,0 +1,16 @@
+
+******************** THIS IS THE MAIN PAGE FOR CHATS SERVER ********************
+
+COMMANDS
+	cl	clear logs
+
+	lc	list all connected clients
+
+	fd	force disconnect client by ip/port or name. Format:
+		fd ip/name/port
+
+	bl	list all black IPs and users
+
+	q	shutdown server
+
+********************************************************************************
