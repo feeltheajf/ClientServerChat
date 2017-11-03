@@ -213,9 +213,4 @@ class Client():
 ##########################################################################
 
 if __name__ == '__main__':
-    try: 
-        server = ni.ifaddresses('eth0')[2][0]['addr']
-    except:
-        server = ""
-    
-    client = Client(server='10.91.38.154', port=11111)
+    client = Client(server='', port=11111)
