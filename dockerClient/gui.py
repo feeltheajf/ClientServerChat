@@ -30,16 +30,16 @@ class GUI:
         self.tmp = {'current': ''}
         self.stickersWindowIsOpen = False
 
-        if platform.system() == 'Darwin':
-            self.boldfont = tkFont.Font(family='Courier New',
-                                    size=20, weight='bold')
-            self.mainfont = tkFont.Font(family='Courier New', size=14)
-            self.smallfont = tkFont.Font(family='Courier New', size=12)
-        else:
-            self.boldfont = tkFont.Font(family='Courier New',
-                                        size=20, weight='bold')
-            self.mainfont = tkFont.Font(family='Courier New', size=10)
-            self.smallfont = tkFont.Font(family='Courier New', size=8)
+        # if platform.system() == 'Darwin':
+        self.boldfont = tkFont.Font(family='Courier New',
+                                size=20, weight='bold')
+        self.mainfont = tkFont.Font(family='Courier New', size=14)
+        self.smallfont = tkFont.Font(family='Courier New', size=12)
+        # else:
+        #     self.boldfont = tkFont.Font(family='Courier New',
+        #                                 size=20, weight='bold')
+        #     self.mainfont = tkFont.Font(family='Courier New', size=10)
+        #     self.smallfont = tkFont.Font(family='Courier New', size=8)
 
         self.lightGray = '#%02x%02x%02x' % (242, 242, 242)
         self.lightBlue = '#%02x%02x%02x' % (98, 181, 197)
