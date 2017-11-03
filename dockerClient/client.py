@@ -1,6 +1,6 @@
 from helper import *
 from os import _exit
-import sys
+import netifaces as ni
 
 
 class Client():
@@ -39,7 +39,8 @@ class Client():
 
             self.log('CONNECTING')
             self.connectionEstablished = True
-        except:
+        except Exception, e:
+            print str(e)
             self.log('CONNECTING', status=10)
 
 ##########################################################################
@@ -212,4 +213,9 @@ class Client():
 ##########################################################################
 
 if __name__ == '__main__':
-    client = Client()
+    try: 
+        server = ni.ifaddresses('eth0')[2][0]['addr']
+    except:
+        server = ""
+    
+    client = Client(server='10.91.38.154', port=11111)

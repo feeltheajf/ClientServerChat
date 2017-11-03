@@ -3,11 +3,11 @@ FROM ubuntu
 RUN apt-get update && apt-get install -y python
 RUN apt-get install -y python-tk
 RUN apt-get install -y python-pip
-RUN pip install pillow
+RUN pip install --upgrade pip
+RUN pip install pillow netifaces
 
-WORKDIR /
 ADD . /
 
-# ENV DISPLAY :0
+EXPOSE 11111
 
 CMD ["python", "gui.py"]
